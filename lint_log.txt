@@ -1,0 +1,133 @@
+﻿
+> codex-neural@0.1.0 lint
+> eslint
+
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\about\page.tsx
+   3:10   warning  'motion' is defined but never used                               @typescript-eslint/no-unused-vars
+  75:112  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\contact\page.tsx
+   4:10  warning  'motion' is defined but never used                                      @typescript-eslint/no-unused-vars
+   5:24  warning  'Mail' is defined but never used                                        @typescript-eslint/no-unused-vars
+   5:30  warning  'MapPin' is defined but never used                                      @typescript-eslint/no-unused-vars
+   5:38  warning  'Phone' is defined but never used                                       @typescript-eslint/no-unused-vars
+   9:12  warning  'status' is assigned a value but never used                             @typescript-eslint/no-unused-vars
+  26:99  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\layout.tsx
+  67:7  warning  'jsonLd' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\page.tsx
+  13:85   error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  15:13   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  15:138  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  15:171  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\process\page.tsx
+  17:91  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\msi\Desktop\codex---neural-main\src\app\services\page.tsx
+   3:10  warning  'motion' is defined but never used                                      @typescript-eslint/no-unused-vars
+  11:97  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\layout\Footer.tsx
+  2:21  warning  'SOCIAL_LINKS' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\layout\Navbar.tsx
+  7:10  warning  'Menu' is defined but never used  @typescript-eslint/no-unused-vars
+  7:16  warning  'X' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\sections\Hero.tsx
+  9:7  warning  'ParticleNetwork' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\sections\ServicesSection.tsx
+   4:10  warning  'motion' is defined but never used        @typescript-eslint/no-unused-vars
+   4:18  warning  'useScroll' is defined but never used     @typescript-eslint/no-unused-vars
+   4:29  warning  'useTransform' is defined but never used  @typescript-eslint/no-unused-vars
+  27:50  warning  'i' is defined but never used             @typescript-eslint/no-unused-vars
+  40:86  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\sections\WhyChooseUs.tsx
+  4:10  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\three\ParticleNetwork.tsx
+   9:27  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+  16:41  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\three\ParticleNetwork.tsx:16:41
+  14 |         const temp = new Float32Array(5000 * 3);
+  15 |         for (let i = 0; i < 5000; i++) {
+> 16 |             const theta = 2 * Math.PI * Math.random();
+     |                                         ^^^^^^^^^^^^^ Cannot call impure function
+  17 |             const phi = Math.acos(2 * Math.random() - 1);
+  18 |             const r = 1.5 + Math.random() * 0.5; // Radius variation
+  19 |                  react-hooks/purity
+  17:39  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\three\ParticleNetwork.tsx:17:39
+  15 |         for (let i = 0; i < 5000; i++) {
+  16 |             const theta = 2 * Math.PI * Math.random();
+> 17 |             const phi = Math.acos(2 * Math.random() - 1);
+     |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  18 |             const r = 1.5 + Math.random() * 0.5; // Radius variation
+  19 |
+  20 |             const x = r * Math.sin(phi) * Math.cos(theta);          react-hooks/purity
+  18:29  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\three\ParticleNetwork.tsx:18:29
+  16 |             const theta = 2 * Math.PI * Math.random();
+  17 |             const phi = Math.acos(2 * Math.random() - 1);
+> 18 |             const r = 1.5 + Math.random() * 0.5; // Radius variation
+     |                             ^^^^^^^^^^^^^ Cannot call impure function
+  19 |
+  20 |             const x = r * Math.sin(phi) * Math.cos(theta);
+  21 |             const y = r * Math.sin(phi) * Math.sin(theta);  react-hooks/purity
+  34:11  warning  'colorRef' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  35:11  warning  'targetColor' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\ui\neural\GlassCard.tsx
+  3:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\components\ui\neural\SectionHeader.tsx
+  23:104  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\msi\Desktop\codex---neural-main\src\constants\services.ts
+  1:10  warning  'Code' is defined but never used    @typescript-eslint/no-unused-vars
+  1:49  warning  'Shield' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\Desktop\codex---neural-main\src\context\EngagementContext.tsx
+   36:37  error    Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\Desktop\codex---neural-main\src\context\EngagementContext.tsx:36:37
+  34 |     // Performance Monitoring Refs
+  35 |     const frameCountRef = useRef(0);
+> 36 |     const lastFrameTimeRef = useRef(Date.now());
+     |                                     ^^^^^^^^^^ Cannot call impure function
+  37 |
+  38 |     // Mouse Tracking Refs
+  39 |     const velocityRef = useRef(0);  react-hooks/purity
+   41:29  error    Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\Desktop\codex---neural-main\src\context\EngagementContext.tsx:41:29
+  39 |     const velocityRef = useRef(0);
+  40 |     const lastMousePos = useRef({ x: 0, y: 0 });
+> 41 |     const lastTime = useRef(Date.now());
+     |                             ^^^^^^^^^^ Cannot call impure function
+  42 |
+  43 |     // Initialize AI
+  44 |     useEffect(() => {                         react-hooks/purity
+  135:9   warning  React Hook useMemo has a missing dependency: 'trackIntent'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/exhaustive-deps
+
+Γ£û 39 problems (16 errors, 23 warnings)
+
