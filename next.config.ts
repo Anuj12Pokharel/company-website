@@ -2,13 +2,33 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Performance optimizations
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  // Faster compilation
+  experimental: {
+    turbo: {
+      root: process.cwd(),
+    },
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
+  },
+  // Disable source maps in development for faster builds
+  productionBrowserSourceMaps: false,
+  // Optimize images
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'via.placeholder.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
+    formats: ['image/webp', 'image/avif'],
   },
   async headers() {
     return [
