@@ -3,14 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // Performance optimizations
-  swcMinify: true,
-
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // Experimental features (VALID ones only)
+  // Experimental features (only supported ones)
   experimental: {
     optimizePackageImports: ["framer-motion", "lucide-react"],
   },
