@@ -180,7 +180,7 @@ export default function FAQPage() {
                             </button>
                         </div>
                     ) : (
-                        filteredFAQs.map((faq, index) => {
+                        filteredFAQs.map((faq) => {
                             const isExpanded = expandedFAQ === faq.id;
                             const isHelpful = helpfulFAQs.has(faq.id);
                             const Icon = getCategoryIcon(faq.category);
@@ -322,7 +322,7 @@ export default function FAQPage() {
                         <div className="flex-1">
                             <h3 className="text-xl font-bold text-foreground mb-2">Still have questions?</h3>
                             <p className="text-sm text-muted-foreground mb-4">
-                                Can't find what you're looking for? Send us your question and we'll get back to you within 24 hours.
+                                Can&apos;t find what you&apos;re looking for? Send us your question and we&apos;ll get back to you within 24 hours.
                             </p>
                             {!showContactForm ? (
                                 <button

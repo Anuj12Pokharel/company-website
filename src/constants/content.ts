@@ -191,7 +191,76 @@ export const CLIENTS = [
 ];
 
 export const TEAM = [
-    { name: "Aman Yadav", role: "System Architect", image: "/team/1.jpg" },
-    { name: "Manohar Singh", role: "Interface Engineer", image: "/team/2.jpg" },
-    { name: "Aman Yadav", role: "Backend Specialist", image: "/team/3.jpg" },
+    {
+        name: "Aman Yadav",
+        role: "System Architect",
+        image: "/team/1.jpg",
+        bio: "Designing the neural pathways of digital infrastructure. Obsessed with scalability and immutable systems.",
+        socials: {
+            linkedin: "#",
+            github: "#",
+            twitter: "#"
+        },
+        badges: ["Founding Member", "Arch"],
+        isFounder: true
+    },
+    {
+        name: "Manohar Singh",
+        role: "Interface Engineer",
+        image: "/team/manohar.jpg",
+        bio: "Crafting fluid, responsive, and intuitive user experiences where code meets perception.",
+        socials: {
+            linkedin: "#",
+            github: "#"
+        },
+        badges: ["Core Team", "UX"],
+        isFounder: false
+    },
+    {
+        name: "Anuj Pokhrel",
+        role: "Backend Specialist",
+        image: "/team/anuj.jpg",
+        bio: "Building the engine room. Logic, security, and performance are non-negotiable.",
+        socials: {
+            linkedin: "#",
+            github: "#"
+        },
+        badges: ["Core Team", "Ops"],
+        isFounder: false
+    },
+    {
+        name: "Rahul Sah",
+        role: "Full Stack Engineer",
+        image: "/team/rahul.jpg",
+        bio: "Bridging the gap between server logic and client implementation with robust, scalable code.",
+        socials: {
+            linkedin: "#",
+            github: "#"
+        },
+        badges: ["Core Team", "Dev"],
+        isFounder: false
+    },
+    {
+        name: "Anjali Singh",
+        role: "Product Designer",
+        image: "/team/anjali.jpg",
+        bio: "Translating complex functional requirements into elegant, user-centric design systems.",
+        socials: {
+            linkedin: "#",
+            twitter: "#"
+        },
+        badges: ["Design", "Creative"],
+        isFounder: false
+    },
+    {
+        name: "Priti Gupta",
+        role: "Operations Lead",
+        image: "/team/priti.jpg",
+        bio: "Ensuring operational excellence and streamlined delivery across all engineering nodes.",
+        socials: {
+            linkedin: "#"
+        },
+        badges: ["Operations", "Lead"],
+        isFounder: false
+    },
 ];

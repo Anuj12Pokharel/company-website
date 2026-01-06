@@ -1,0 +1,209 @@
+﻿
+> codex-neural@0.1.0 lint
+> eslint
+
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\about\page.tsx
+  3:10  warning  'COMPANY_INFO' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\api\whatsapp\webhook\route.ts
+  170:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\careers\page.tsx
+    3:29   warning  'useEffect' is defined but never used                            @typescript-eslint/no-unused-vars
+    8:10   warning  'cn' is defined but never used                                   @typescript-eslint/no-unused-vars
+  245:91   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  247:39   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  447:117  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\contact\page.tsx
+    6:5   warning  'ArrowUpRight' is defined but never used                         @typescript-eslint/no-unused-vars
+  245:68  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  342:47  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\faq\page.tsx
+  183:48  warning  'index' is defined but never used                                @typescript-eslint/no-unused-vars
+  325:36  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  325:52  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  325:97  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\page.tsx
+  5:8  warning  'TestimonialsSection' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\OneDrive\Desktop\company-website\app\portfolio\page.tsx
+  32:13  error  'filtered' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\layout\Futuristic3DBackgroundWrapper.tsx
+  15:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\layout\Futuristic3DBackgroundWrapper.tsx:15:9
+  13 |
+  14 |     useEffect(() => {
+> 15 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     }, []);
+  17 |
+  18 |     if (!mounted) {  react-hooks/set-state-in-effect
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\layout\StarsConstellation.tsx
+   27:15  warning  'container' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  158:39  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\layout\StarsConstellation.tsx:158:39
+  156 |                     }}
+  157 |                     transition={{
+> 158 |                         duration: 2 + Math.random() * 2,
+      |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  159 |                         repeat: Infinity,
+  160 |                         delay: star.twinkleDelay,
+  161 |                         ease: "easeInOut",  react-hooks/purity
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\sections\Hero.tsx
+  245:112  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  368:88   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  371:51   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx
+  109:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  130:13  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:130:13
+  128 |
+  129 |         return (
+> 130 |             <div className="fixed inset-0 -z-10 pointer-events-none">
+      |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 131 |                 <Canvas
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 132 |                     camera={{ position: [0, 0, 5], fov: 75 }}
+      ΓÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 155 |                 </Canvas>
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 156 |             </div>
+      | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  157 |         );
+  158 |     } catch (error) {
+  159 |         console.error("Futuristic3DBackground error:", error);                                                                                react-hooks/error-boundaries
+  131:17  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:131:17
+  129 |         return (
+  130 |             <div className="fixed inset-0 -z-10 pointer-events-none">
+> 131 |                 <Canvas
+      |                 ^^^^^^^
+> 132 |                     camera={{ position: [0, 0, 5], fov: 75 }}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 133 |                     dpr={dpr}
+      ΓÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 154 |                     <NeuralNodes />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 155 |                 </Canvas>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  156 |             </div>
+  157 |         );
+  158 |     } catch (error) {  react-hooks/error-boundaries
+  150:21  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:150:21
+  148 |                     }}
+  149 |                 >
+> 150 |                     <ambientLight intensity={0.2} />
+      |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  151 |                     <pointLight position={[10, 10, 10]} intensity={0.5} color="#00FF88" />
+  152 |                     <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00D9FF" />
+  153 |                     <FloatingGeometry />                                                                                                                                                                                                                                                                react-hooks/error-boundaries
+  151:21  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:151:21
+  149 |                 >
+  150 |                     <ambientLight intensity={0.2} />
+> 151 |                     <pointLight position={[10, 10, 10]} intensity={0.5} color="#00FF88" />
+      |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  152 |                     <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00D9FF" />
+  153 |                     <FloatingGeometry />
+  154 |                     <NeuralNodes />                                                                                                                                                                                                             react-hooks/error-boundaries
+  152:21  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:152:21
+  150 |                     <ambientLight intensity={0.2} />
+  151 |                     <pointLight position={[10, 10, 10]} intensity={0.5} color="#00FF88" />
+> 152 |                     <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00D9FF" />
+      |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  153 |                     <FloatingGeometry />
+  154 |                     <NeuralNodes />
+  155 |                 </Canvas>                                                                                                                                                                                                   react-hooks/error-boundaries
+  153:21  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:153:21
+  151 |                     <pointLight position={[10, 10, 10]} intensity={0.5} color="#00FF88" />
+  152 |                     <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00D9FF" />
+> 153 |                     <FloatingGeometry />
+      |                     ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  154 |                     <NeuralNodes />
+  155 |                 </Canvas>
+  156 |             </div>                                                                                                                                                                                                                                                                                         react-hooks/error-boundaries
+  154:21  error    Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\Futuristic3DBackground.tsx:154:21
+  152 |                     <pointLight position={[-10, -10, 10]} intensity={0.5} color="#00D9FF" />
+  153 |                     <FloatingGeometry />
+> 154 |                     <NeuralNodes />
+      |                     ^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  155 |                 </Canvas>
+  156 |             </div>
+  157 |         );                                                                                                                                                                                                                                                                                                                                                                              react-hooks/error-boundaries
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\ParticleNetwork.tsx
+  17:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  81:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\three\ParticleNetwork.tsx:81:9
+  79 |     
+  80 |     useEffect(() => {
+> 81 |         setWebglSupported(checkWebGLSupport());
+     |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  82 |     }, []);
+  83 |
+  84 |     if (!webglSupported) {  react-hooks/set-state-in-effect
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\components\whatsapp\WhatsAppButton.tsx
+  38:18  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\msi\OneDrive\Desktop\company-website\src\constants\faqs.ts
+  1:47  warning  'Clock' is defined but never used     @typescript-eslint/no-unused-vars
+  1:62  warning  'Zap' is defined but never used       @typescript-eslint/no-unused-vars
+  1:67  warning  'Globe' is defined but never used     @typescript-eslint/no-unused-vars
+  1:74  warning  'FileText' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 37 problems (22 errors, 15 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

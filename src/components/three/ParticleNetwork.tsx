@@ -9,7 +9,7 @@ import { useEngagement } from "@/context/EngagementContext";
 // Check WebGL support for Chrome and other browsers
 function checkWebGLSupport(): boolean {
     if (typeof window === "undefined") return false;
-    
+
     try {
         const canvas = document.createElement("canvas");
         const gl = canvas.getContext("webgl2") || canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
@@ -76,9 +76,12 @@ function Particles(props: ComponentProps<typeof Points>) {
 export default function ParticleNetwork() {
     const { qualityMode } = useEngagement();
     const [webglSupported, setWebglSupported] = useState(false);
-    
+
     useEffect(() => {
-        setWebglSupported(checkWebGLSupport());
+        const timer = setTimeout(() => {
+            setWebglSupported(checkWebGLSupport());
+        }, 0);
+        return () => clearTimeout(timer);
     }, []);
 
     if (!webglSupported) {
@@ -92,8 +95,8 @@ export default function ParticleNetwork() {
             <Canvas
                 camera={{ position: [0, 0, 1] }}
                 dpr={dpr}
-                gl={{ 
-                    antialias: false, 
+                gl={{
+                    antialias: false,
                     powerPreference: "high-performance",
                     alpha: true,
                     preserveDrawingBuffer: false,

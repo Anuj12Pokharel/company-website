@@ -9,6 +9,7 @@ interface Star {
     size: number;
     opacity: number;
     twinkleDelay: number;
+    duration: number;
 }
 
 interface Constellation {
@@ -24,14 +25,13 @@ export default function StarsConstellation() {
     useEffect(() => {
         if (!containerRef.current) return;
 
-        const container = containerRef.current;
         const width = window.innerWidth;
         const height = window.innerHeight;
 
         // Generate random stars
         const starCount = 150;
         const newStars: Star[] = [];
-        
+
         for (let i = 0; i < starCount; i++) {
             newStars.push({
                 x: Math.random() * width,
@@ -39,10 +39,9 @@ export default function StarsConstellation() {
                 size: Math.random() * 2 + 0.5,
                 opacity: Math.random() * 0.8 + 0.2,
                 twinkleDelay: Math.random() * 2,
+                duration: 2 + Math.random() * 2,
             });
         }
-
-        setStars(newStars);
 
         // Create constellation patterns (connect nearby stars)
         const newConstellations: Constellation[] = [];
@@ -67,7 +66,11 @@ export default function StarsConstellation() {
             }
         }
 
-        setConstellations(newConstellations);
+        // Wrap state updates in setTimeout to avoid synchronous setState warning
+        setTimeout(() => {
+            setStars(newStars);
+            setConstellations(newConstellations);
+        }, 0);
 
         // Handle window resize
         const handleResize = () => {
@@ -96,7 +99,7 @@ export default function StarsConstellation() {
             <svg className="absolute inset-0 w-full h-full">
                 {constellations.map((constellation, idx) => {
                     if (constellation.stars.length < 2) return null;
-                    
+
                     const startStar = stars[constellation.stars[0]];
                     if (!startStar) return null;
 
@@ -155,7 +158,7 @@ export default function StarsConstellation() {
                         scale: [1, 1.2, 1],
                     }}
                     transition={{
-                        duration: 2 + Math.random() * 2,
+                        duration: star.duration,
                         repeat: Infinity,
                         delay: star.twinkleDelay,
                         ease: "easeInOut",

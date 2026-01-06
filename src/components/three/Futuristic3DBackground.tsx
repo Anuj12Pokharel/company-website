@@ -119,7 +119,6 @@ export default function Futuristic3DBackground() {
         return null;
     }
     
-    try {
         const dpr: [number, number] = qualityMode === "high" ? [1, 2] : [1, 1];
 
         if (qualityMode === "low") {
@@ -155,8 +154,4 @@ export default function Futuristic3DBackground() {
                 </Canvas>
             </div>
         );
-    } catch (error) {
-        console.error("Futuristic3DBackground error:", error);
-        return null;
-    }
 }

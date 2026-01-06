@@ -242,7 +242,7 @@ export default function SystemBootHero() {
                                         <div className="mb-8">
                                             <p className="text-gray-600 text-sm mb-2">Have a Project in Mind?</p>
                                             <h2 className="text-4xl font-bold text-gray-900 mb-2">Get In Touch</h2>
-                                            <p className="text-gray-500 text-sm">Fill out the form below and we'll get back to you shortly.</p>
+                                            <p className="text-gray-500 text-sm">Fill out the form below and we&apos;ll get back to you shortly.</p>
                                         </div>
 
                                         <form className="space-y-4">
@@ -273,7 +273,7 @@ export default function SystemBootHero() {
                                                         id="modal-phone"
                                                         type="tel"
                                                         required
-                                                        placeholder="9800000000"
+                                                        placeholder="9840327185"
                                                         className="flex-1 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
                                                     />
                                                 </div>
@@ -365,10 +365,10 @@ export default function SystemBootHero() {
 
                                         <div className="relative z-10">
                                             <h3 className="text-2xl font-semibold mb-2">We would love to hear from you</h3>
-                                            <h2 className="text-3xl font-bold mb-8">Let's Build Something Amazing</h2>
+                                            <h2 className="text-3xl font-bold mb-8">Let&apos;s Build Something Amazing</h2>
                                             <p className="text-white/90 mb-12 text-sm leading-relaxed">
                                                 Whether you have a project in mind or just want to explore possibilities,
-                                                we're here to help turn your vision into reality.
+                                                we&apos;re here to help turn your vision into reality.
                                             </p>
 
                                             <div className="space-y-8">
@@ -380,7 +380,7 @@ export default function SystemBootHero() {
                                                     </div>
                                                     <div>
                                                         <p className="text-white/90 text-sm mb-1">Our Phone Number</p>
-                                                        <p className="text-xl font-semibold">+977 9800000000</p>
+                                                        <p className="text-xl font-semibold">+977 9840327185</p>
                                                     </div>
                                                 </div>
 
@@ -392,7 +392,7 @@ export default function SystemBootHero() {
                                                     </div>
                                                     <div>
                                                         <p className="text-white/90 text-sm mb-1">Our Email</p>
-                                                        <p className="text-xl font-semibold break-all">contact@codexneural.com</p>
+                                                        <p className="text-xl font-semibold break-all">codexneural2025@gmail.com</p>
                                                     </div>
                                                 </div>
 

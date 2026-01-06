@@ -29,9 +29,9 @@ export default function PortfolioPage() {
     const recommendedCategory = primaryIntent ? intentToCategory[primaryIntent] : null;
 
     const filteredAndSortedProjects = useMemo(() => {
-        let filtered = PROJECTS.filter(project => {
+        const filtered = PROJECTS.filter(project => {
             const matchesCategory = activeCategory === "All" || project.category === activeCategory;
-            const matchesSearch = searchQuery === "" || 
+            const matchesSearch = searchQuery === "" ||
                 project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 project.tech.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));

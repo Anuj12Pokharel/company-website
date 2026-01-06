@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-    ArrowUpRight,
+    // ArrowUpRight,
     Mail,
     Phone,
     MapPin,
@@ -186,14 +186,14 @@ export default function ContactPage() {
         {
             icon: Mail,
             label: "Email",
-            value: "contact@codexneural.com",
-            link: "mailto:contact@codexneural.com"
+            value: "codexneural2025@gmail.com",
+            link: "mailto:codexneural2025@gmail.com"
         },
         {
             icon: Phone,
             label: "Phone",
-            value: "+977 9800000000",
-            link: "tel:+9779800000000"
+            value: "+977 9840327185",
+            link: "tel:+9779840327185"
         },
         {
             icon: MapPin,
@@ -242,7 +242,7 @@ export default function ContactPage() {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-white/70 max-w-2xl mx-auto"
                     >
-                        Ready to build something extraordinary? Let's connect and discuss how we can help bring your vision to life.
+                        Ready to build something extraordinary? Let&apos;s connect and discuss how we can help bring your vision to life.
                     </motion.p>
                 </div>
 
@@ -339,7 +339,7 @@ export default function ContactPage() {
                                         </div>
                                         <h3 className="text-3xl font-extrabold text-white mb-3">SIGNAL RECEIVED</h3>
                                         <p className="text-white/70 mb-6 max-w-md mx-auto">
-                                            We've received your message and will analyze your transmission. Expect a response within 24 hours.
+                                            We&apos;ve received your message and will analyze your transmission. Expect a response within 24 hours.
                                         </p>
                                         <button
                                             onClick={() => setStatus("idle")}
@@ -434,7 +434,7 @@ export default function ContactPage() {
                                                         "w-full bg-card/30 border-b-2 py-4 px-4 text-white font-semibold placeholder:text-white/50 focus:outline-none focus:bg-card/50 transition-all rounded-t",
                                                         errors.phone ? "border-red-500" : "border-white/30 focus:border-primary"
                                                     )}
-                                                    placeholder="+977 9800000000"
+                                                    placeholder="+977 9840327185"
                                                 />
                                                 {errors.phone && (
                                                     <p className="text-red-500 text-xs mt-2">{errors.phone}</p>

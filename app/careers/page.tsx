@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/ui/neural/SectionHeader";
 import { ArrowUpRight, Search, X, MapPin, Clock, DollarSign, Briefcase, Filter, CheckCircle2, Users, Zap, Shield, TrendingUp, Calendar, Send } from "lucide-react";
 import { JOBS, DEPARTMENTS, JOB_TYPES, LOCATIONS, type Job } from "@/constants/jobs";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 
 export default function CareersPage() {
     const [selectedJob, setSelectedJob] = useState<Job | null>(null);
@@ -122,18 +122,8 @@ export default function CareersPage() {
                         <div className="md:col-span-2 space-y-4">
                             {filteredJobs.length === 0 ? (
                                 <div className="text-center py-12">
-                                    <p className="text-muted-foreground mb-4">No positions match your criteria.</p>
-                                    <button
-                                        onClick={() => {
-                                            setSearchQuery("");
-                                            setSelectedDepartment("All");
-                                            setSelectedType("All");
-                                            setSelectedLocation("All");
-                                        }}
-                                        className="px-4 py-2 bg-primary text-black rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm"
-                                    >
-                                        Clear Filters
-                                    </button>
+                                    <p className="text-muted-foreground mb-4">Currently no vacancies available.</p>
+                                    <p className="text-xs text-muted-foreground">Please check back later or send us your profile.</p>
                                 </div>
                             ) : (
                                 filteredJobs.map((job) => (
@@ -242,9 +232,9 @@ export default function CareersPage() {
                             {/* General Application */}
                             <div className="p-6 bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 rounded-xl">
                                 <Shield className="w-6 h-6 text-primary mb-3" />
-                                <h4 className="text-sm font-bold text-foreground mb-2">Don't see your role?</h4>
+                                <h4 className="text-sm font-bold text-foreground mb-2">Don&apos;t see your role?</h4>
                                 <p className="text-xs text-muted-foreground mb-4">
-                                    We're always looking for exceptional talent. Send us your profile.
+                                    We&apos;re always looking for exceptional talent. Send us your profile.
                                 </p>
                                 <a
                                     href="mailto:network@codexneural.com"
@@ -444,7 +434,7 @@ export default function CareersPage() {
 
                                 <div className="p-8">
                                     <h2 className="text-2xl font-bold text-foreground mb-2">Apply for {selectedJob.title}</h2>
-                                    <p className="text-sm text-muted-foreground mb-6">Fill out the form below and we'll get back to you soon.</p>
+                                    <p className="text-sm text-muted-foreground mb-6">Fill out the form below and we&apos;ll get back to you soon.</p>
 
                                     <form className="space-y-4" onSubmit={(e) => {
                                         e.preventDefault();
