@@ -94,6 +94,16 @@ export const SERVICES_DETAILED = [
         icon: Terminal,
         features: ["Blog Posts", "Copywriting", "Technical Writing", "SEO Content", "Email Marketing", "Content Strategy"],
         category: "business"
+    },
+    {
+        id: "blockchain-web3",
+        title: "Blockchain & Web3 Development",
+        short: "Web3 & Blockchain",
+        desc: "Building decentralized, secure, and transparent solutions for the next generation of the web.",
+        detailedDesc: "We specialize in developing decentralized applications (dApps), smart contracts, and custom blockchain solutions. Our expertise covers Ethereum, Solana, and other major protocols. We ensure high security, gas efficiency, and seamless integration with existing systems.",
+        icon: Cpu,
+        features: ["Smart Contracts", "dApp Development", "DeFi Solutions", "NFT Marketplaces", "Tokenomics Design", "Security Audits"],
+        category: "technical"
     }
 ];
 
@@ -193,74 +203,87 @@ export const CLIENTS = [
 export const TEAM = [
     {
         name: "Aman Yadav",
-        role: "System Architect",
-        image: "/team/1.jpg",
-        bio: "Designing the neural pathways of digital infrastructure. Obsessed with scalability and immutable systems.",
+        role: "Advisor & Data Analysis Specialist",
+        image: "/team/aman.jpg",
+        bio: "Providing strategic guidance and extracting actionable insights from complex datasets. Driving data-driven decision making and business intelligence.",
         socials: {
             linkedin: "#",
             github: "#",
             twitter: "#"
         },
-        badges: ["Founding Member", "Arch"],
-        isFounder: true
+        badges: ["Advisor", "Data"],
+        isFounder: false
     },
     {
         name: "Manohar Singh",
-        role: "Interface Engineer",
+        role: "Founder & CEO",
         image: "/team/manohar.jpg",
-        bio: "Crafting fluid, responsive, and intuitive user experiences where code meets perception.",
+        bio: "Leading strategic vision and operational excellence. Orchestrating business development, client relations, and day-to-day company operations.",
         socials: {
             linkedin: "#",
             github: "#"
         },
-        badges: ["Core Team", "UX"],
-        isFounder: false
+        badges: ["Founding Member", "CEO"],
+        isFounder: true
     },
     {
         name: "Anuj Pokhrel",
-        role: "Backend Specialist",
+        role: "CTO & Backend Developer",
         image: "/team/anuj.jpg",
-        bio: "Building the engine room. Logic, security, and performance are non-negotiable.",
+        bio: "Architecting scalable backend systems and leading technical strategy. Building robust server infrastructure with focus on security, performance, and reliability.",
         socials: {
             linkedin: "#",
             github: "#"
         },
-        badges: ["Core Team", "Ops"],
-        isFounder: false
+        badges: ["Founding Member", "CTO"],
+        isFounder: true
     },
     {
         name: "Rahul Sah",
-        role: "Full Stack Engineer",
+        role: "Backend Specialist",
         image: "/team/rahul.jpg",
-        bio: "Bridging the gap between server logic and client implementation with robust, scalable code.",
+        bio: "Specializing in the development of robust, scalable backend architectures. Ensuring high performance and seamless server-side integration.",
         socials: {
             linkedin: "#",
             github: "#"
         },
-        badges: ["Core Team", "Dev"],
+        badges: ["Core Team", "Backend"],
         isFounder: false
     },
     {
         name: "Anjali Singh",
-        role: "Product Designer",
+        role: "Frontend Developer & UI/UX Designer",
         image: "/team/anjali.jpg",
-        bio: "Translating complex functional requirements into elegant, user-centric design systems.",
+        bio: "Crafting responsive, performant user interfaces with modern frameworks. Designing intuitive user experiences and transforming them into pixel-perfect, interactive implementations.",
         socials: {
             linkedin: "#",
             twitter: "#"
         },
-        badges: ["Design", "Creative"],
+        badges: ["Core Team", "Design"],
         isFounder: false
     },
     {
         name: "Priti Gupta",
-        role: "Operations Lead",
+        role: "SEO Specialist",
         image: "/team/priti.jpg",
-        bio: "Ensuring operational excellence and streamlined delivery across all engineering nodes.",
+        bio: "Optimizing digital presence and search visibility. Implementing data-driven SEO strategies to drive organic growth and improve search rankings.",
         socials: {
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/priti-gupta-1b5a68217",
+            github: "https://github.com/priteegupta"
         },
-        badges: ["Operations", "Lead"],
+        badges: ["Marketing", "SEO"],
+        isFounder: false
+    },
+    {
+        name: "Bibek Sah",
+        role: "Automation Engineer",
+        image: "/team/bibek.jpg",
+        bio: "Building intelligent automation pipelines and CI/CD workflows. Streamlining development processes through infrastructure as code and DevOps practices.",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/bibek-shah-8b460b2bb/",
+            github: "https://github.com/bibekshah220"
+        },
+        badges: ["Core Team", "DevOps"],
         isFounder: false
     },
 ];

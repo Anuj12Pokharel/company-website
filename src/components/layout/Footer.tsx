@@ -10,24 +10,16 @@ export default function Footer() {
             <div className="container mx-auto px-4 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     {/* Brand Node */}
-                    <div className="md:col-span-2 pr-12">
-                        <Link href="/" className="flex items-center gap-3 mb-8 group">
+                    <div className="md:col-span-1">
+                        <Link href="/" className="flex items-center gap-3 mb-6 group">
                             <div className="opacity-70 group-hover:opacity-100 transition-opacity">
                                 <Logo />
                             </div>
 
                         </Link>
-                        <p className="text-muted-foreground text-sm leading-relaxed max-w-md mb-8">
+                        <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
                             {COMPANY_INFO.description}
                         </p>
-                        <div className="flex gap-4">
-                            <div className="px-3 py-1 border border-white/10 rounded-full text-[10px] text-muted-foreground uppercase tracking-widest">
-                                ISO 27001 ALIGNED
-                            </div>
-                            <div className="px-3 py-1 border border-white/10 rounded-full text-[10px] text-muted-foreground uppercase tracking-widest">
-                                CARBON NEUTRAL
-                            </div>
-                        </div>
                     </div>
 
                     {/* Navigation */}
@@ -55,19 +47,19 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-muted-foreground text-[10px] font-mono uppercase tracking-widest">
-                        &copy; {new Date().getFullYear()} CODEX NEURAL
+            <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p className="text-muted-foreground text-[10px] font-mono uppercase tracking-widest">
+                    &copy; {new Date().getFullYear()} CODEX NEURAL
+                </p>
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                    <p className="text-muted-foreground text-[10px] font-mono text-center max-w-md">
+                        Built with deliberate constraint. Maintained with long-term responsibility.
                     </p>
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <p className="text-muted-foreground text-[10px] font-mono text-center max-w-md">
-                            Built with deliberate constraint. Maintained with long-term responsibility.
-                        </p>
-                        <div className="flex gap-8">
-                            <Link href="#" className="text-muted-foreground hover:text-foreground text-[10px] font-mono uppercase tracking-widest transition-colors">Privacy</Link>
-                            <Link href="#" className="text-muted-foreground hover:text-foreground text-[10px] font-mono uppercase tracking-widest transition-colors">Terms</Link>
-                        </div>
+                    <div className="flex gap-8">
+                        <Link href="#" className="text-muted-foreground hover:text-foreground text-[10px] font-mono uppercase tracking-widest transition-colors">Privacy</Link>
+                        <Link href="#" className="text-muted-foreground hover:text-foreground text-[10px] font-mono uppercase tracking-widest transition-colors">Terms</Link>
                     </div>
                 </div>
             </div>

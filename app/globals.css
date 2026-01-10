@@ -81,29 +81,6 @@ body.careers-page::before {
   opacity: 0 !important;
 }
 
-/* Hide background elements on FAQ page */
-body.faq-page .gradient-orb,
-body.faq-page [class*="gradient-orb"],
-body.faq-page canvas,
-body.faq-page canvas[data-engine],
-body.faq-page .bg-noise,
-body.faq-page svg[class*="star"],
-body.faq-page [class*="StarsConstellation"],
-body.faq-page [class*="AmbientBackground"],
-body.faq-page [class*="Futuristic3DBackground"],
-body.faq-page [class*="Futuristic3DBackgroundWrapper"],
-body.faq-page [class*="NeuralPulse"] {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-body.faq-page::before {
-  display: none !important;
-  opacity: 0 !important;
-}
-
 /* Hide background elements on contact page */
 body.contact-page .gradient-orb,
 body.contact-page [class*="gradient-orb"],
