@@ -220,8 +220,8 @@ export const TEAM = [
         image: "/team/manohar.jpg",
         bio: "Leading strategic vision and operational excellence. Orchestrating business development, client relations, and day-to-day company operations.",
         socials: {
-            linkedin: "#",
-            github: "#"
+            linkedin: "https://www.linkedin.com/in/manohar-cn",
+            github: "https://github.com/Manoharaya"
         },
         badges: ["Founding Member", "CEO"],
         isFounder: true
@@ -232,8 +232,8 @@ export const TEAM = [
         image: "/team/anuj.jpg",
         bio: "Architecting scalable backend systems and leading technical strategy. Building robust server infrastructure with focus on security, performance, and reliability.",
         socials: {
-            linkedin: "#",
-            github: "#"
+            linkedin: "https://www.linkedin.com/in/anujpokharel2468",
+            github: "https://github.com/Anuj12Pokharel"
         },
         badges: ["Founding Member", "CTO"],
         isFounder: true
@@ -244,8 +244,8 @@ export const TEAM = [
         image: "/team/rahul.jpg",
         bio: "Specializing in the development of robust, scalable backend architectures. Ensuring high performance and seamless server-side integration.",
         socials: {
-            linkedin: "#",
-            github: "#"
+            linkedin: "https://www.linkedin.com/in/rahul-kumar-sah-b77885148/",
+            github: "https://github.com/rahul-4321/"
         },
         badges: ["Core Team", "Backend"],
         isFounder: false
@@ -256,7 +256,8 @@ export const TEAM = [
         image: "/team/anjali.jpg",
         bio: "Crafting responsive, performant user interfaces with modern frameworks. Designing intuitive user experiences and transforming them into pixel-perfect, interactive implementations.",
         socials: {
-            linkedin: "#",
+            linkedin: "https://www.linkedin.com/in/anjali-singh-11138b271/",
+            github: "https://github.com/Anjalisingh44",
             twitter: "#"
         },
         badges: ["Core Team", "Design"],
